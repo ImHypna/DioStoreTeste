@@ -1,0 +1,240 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Montserrat';font-size: 20px;
+}
+
+.header-inner-content{
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navbar{
+    background-color: #2c2c2c;
+    padding: 1rem;
+    position:sticky;
+    top: 0;
+    box-shadow: 10px 0px 10px #2c2c2c;
+    z-index:99;
+}
+.navbar>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.logo{
+    color: #f5e71d
+}
+.logo span{
+    color: #fff
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.nav-icon-container{
+    display:flex;
+    align-items: center;
+}
+.nav-icon-container img{
+    width: 30px;
+    cursor: pointer;
+}
+.nav-icon-container img:first-child{
+    margin-right: 16px;
+}
+nav ul li{
+    color: #fff;
+    margin-right: 24px;
+    cursor: pointer;
+}
+nav ul li:hover{
+    transform: translateY(-5px);
+    transition: all 0.2s;
+    font-weight: bold;
+}
+.menu-button{
+    display: none;
+}
+header{
+    background-image: radial-gradient(#fff,#c7c7c7);
+}
+.header-bottom-side{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    padding: 16px;
+}
+.header-bottom-side-left{
+    height: 100%;
+    flex-basis: 50%;
+}
+.header-bottom-side-right{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-bottom-side-right img{
+    width: 115%;
+
+}
+.header-bottom-side-left h2{
+    font-size: 51px;
+    margin-bottom: 24px;
+}
+.header-bottom-side-left button{
+    background-color: #f5e71d;
+    border: none;
+    cursor: pointer;
+    padding: 13px 61px;
+    border-radius: 9999px;
+    color: #3c3c33;
+    font-weight: 500;
+    font-size: 16px;
+
+}
+.header-bottom-side-left button:hover{
+    background-color: #9e9406;
+    transition: all 0.4s;
+}
+
+
+.gray-background{
+    background-color: #2c2c2c;
+}
+
+
+.product-catalog{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.paidefamilia{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: fit-content;
+    
+}
+.paidefamilia >button{
+    background-color: #f5e71d;
+    border: none;
+    cursor: pointer;
+    padding: 15px 45px;
+    border-radius: 15px;
+    color: #3c3c33;
+    font-weight: 500;
+    font-size: 16px;
+
+}
+.paidefamilia >button:hover{
+    transform: translateY(-5px);
+    transition: all 0.4s;
+    
+
+}
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.cart {
+    opacity: 0; /* Defina a opacidade inicial para 0 */
+    transition: opacity 0.5s ease; /* Adicione uma transição de opacidade com 0.5 segundos de duração */
+    flex-direction: column;
+    position: fixed;
+    right: 200px;
+    width: 15%; /* Usando porcentagem para torná-lo responsivo */
+    background-color: #fff; /* Cor de fundo do carrinho */
+    padding: 40px 60px;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adicione uma sombra para destacar o carrinho */
+    margin-left: auto; /* Isso alinhará o carrinho à direita */
+    border-radius: 10px; /* Adicione bordas arredondadas */
+    font-family: 'Montserrat', sans-serif; /* Escolha uma fonte moderna */
+    color: #333; /* Cor do texto */
+}
+.show-cart{
+    
+    opacity: 1;
+    
+}
+
+/* Estilize a seção do total */
+.cart-total {
+    width: 20%; /* Usando porcentagem para torná-lo responsivo */
+    padding: 10px;
+    font-size: 16px;
+    margin-left: auto; /* Isso alinhará a seção de total à direita */
+    border-radius: 10px; /* Adicione bordas arredondadas */
+    font-family: 'Montserrat', sans-serif; /* Use a mesma fonte do carrinho */
+    color: #333; /* Cor do texto */
+}
+.removerbutton{
+    background-color: #f5e71d;
+    border: none;
+    cursor: pointer;
+    padding: 1px 1px;
+    border-radius: 15px;
+    color: #3c3c33;
+    font-weight: 500;
+    margin-right: 20px;
+    font-size: 12px;
+
+}
+.ProsseguirButton{
+    background-color: #f5e71d;
+    border: none;
+    cursor: pointer;
+    padding: 10px 35px;
+    border-radius: 9999px;
+    color: #3c3c33;
+    font-weight: 500;
+    font-size: 16px;
+    
+
+}
+
+
+
+@media (max-width:800px) {
+    .logo{
+        font-size: 19px;
+    }
+    .menu-button{
+        display: block;
+    }
+    .header-bottom-side{
+        flex-direction: column;
+        text-align: center;
+        padding-top: 64px;
+    }
+
+nav{
+    position: absolute;
+    background-color: #2c2c2c;
+    width: 100%;
+    top: 45px;
+    display: none;
+}
+.show-menu nav{
+    display: block;
+}
+nav ul{
+    flex-direction: column;
+}
+nav ul li{
+    text-align: center;
+    padding: 13px;
+
+}
+}

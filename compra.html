@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo de pagamento</title>
+    <link rel="stylesheet" href="styles/comprastyle.css">
+</head>
+<body>
+    <h1>Metodo de pagamento</h1>
+
+    <h2>Itens no Carrinho: --precisa do back!(olhar o JS)</h2>
+    <ul id="cart-items">
+        <!-- Itens selecionados serão exibidos aqui -->
+    </ul>
+
+    <h2>Informações de Pagamento: Mesma coisa de cima</h2>
+    <form action="process_payment.php" method="post">
+        <ul>
+            <li>
+                <label>
+                    <input type="radio" name="payment_method" value="credit_card">
+                    Cartão de Crédito
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="payment_method" value="debit_card">
+                    Cartão de Débito
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="payment_method" value="paypal">
+                    PayPal
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="radio" name="payment_method" value="bank_transfer">
+                    Transferência Bancária
+                </label>
+            </li>
+        </ul>
+
+        <!-- Campos de informações de pagamento aqui (ex: número do cartão, data de validade, etc.) -->
+
+        <button type="submit">Pagar</button>
+    </form>
+</body>
+</html>
